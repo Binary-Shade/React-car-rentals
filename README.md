@@ -2,6 +2,8 @@
 
 **Author:** [Binary-Shade](https://github.com/Binary-Shade/React-car-rentals.git)
 
+### Live Preview : https://regal-dasik-718ba9.netlify.app/
+
 ## Overview
 
 **Stanch Car Rentals** is a fully responsive and feature-rich car rental website built with React. The project aims to offer users a seamless experience in browsing, filtering, and booking rental cars. It includes key functionalities like search filters, a detailed car information page, and a payment system integrated into the UI design.
