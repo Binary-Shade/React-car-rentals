@@ -470,4 +470,3 @@ export const RecentCars = [
 
 
 export default cars
-export {car24}
