@@ -22,15 +22,14 @@
 - **TailWind CSS**: For styling and ensuring responsive design.
 
 ## Screenshots
-
 ### shot-1
-https://github.com/user-attachments/assets/f08c6983-ea76-4c0f-8207-a3fa972b8823
+![screenhot1](https://github.com/user-attachments/assets/f08c6983-ea76-4c0f-8207-a3fa972b8823)
 ### shot-2
-https://github.com/user-attachments/assets/51f241f0-f612-44f3-84f4-f637c8e2ae1f
+![screenhot2](https://github.com/user-attachments/assets/51f241f0-f612-44f3-84f4-f637c8e2ae1f)
 ### shot-3
-https://github.com/user-attachments/assets/3cba3dc5-3e24-4b7d-b23c-102ff72c49d8
+![screenhot3](https://github.com/user-attachments/assets/3cba3dc5-3e24-4b7d-b23c-102ff72c49d8)
 ### shot-4
-https://github.com/user-attachments/assets/b6899001-a683-4df1-9c21-5ce756853aee
+![screenhot4](https://github.com/user-attachments/assets/b6899001-a683-4df1-9c21-5ce756853aee)
 
 ## Getting Started
 
