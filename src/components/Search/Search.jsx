@@ -19,7 +19,7 @@ const Search = ({ search, setSearch, sliderValue, setSliderValue }) => {
     return (
         <div className='container'>
             <div>
-                <form className="w-[400px] shadow-lg lg:w-max bg-white p-5 rounded" onSubmit={(e) => e.preventDefault()}>
+                <form className="w-max-[380px] w-max shadow-lg lg:w-max bg-white p-5 rounded" onSubmit={(e) => e.preventDefault()}>
                     <div className="flex flex-col gap-4">
                         <div className="flex flex-col">
                             <label htmlFor="name" className="text-sm font-medium text-stone-600">Car Name</label>
@@ -91,12 +91,6 @@ const Search = ({ search, setSearch, sliderValue, setSliderValue }) => {
                         >
                             Reset
                         </button>
-                        {/* <button 
-                            type="submit" 
-                            className="rounded-lg bg-green-600 px-8 py-2 font-medium text-white outline-none hover:opacity-80 focus:ring"
-                        >
-                            Search
-                        </button> */}
                     </div>
                 </form>
             </div>

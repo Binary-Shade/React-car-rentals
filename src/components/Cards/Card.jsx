@@ -11,13 +11,13 @@ const Card = ({ item }) => {
   };
 
   return (
-    <div className="flex justify-center items-center w-[350px]">
+    <div className="flex justify-center items-center w-[350px] hover:shadow-xl transition-shadow">
       <div className="max-w-[720px] mx-auto ">
         <div className="relative flex flex-col text-gray-700 shadow-md bg-clip-border rounded-xl  h-96">
           <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl">
             <img
               src={item.carImage}
-              alt="card-image"
+              alt={`${item.carTitle}-image`}
               className="object-cover "
             />
           </div>

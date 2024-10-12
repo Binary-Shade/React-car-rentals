@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="#" className="flex items-center">
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Stanch Car Rentals</span>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Stanch Car Rentals</span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Test Drives</h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">Test Drives</h2>
+              <ul className=" text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline"></a>
                 </li>
@@ -27,8 +27,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">Follow us</h2>
+              <ul className=" text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="" className="hover:underline">FaceBook</a>
                 </li>
@@ -38,8 +38,8 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">Legal</h2>
+              <ul className=" text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">Privacy Policy</a>
                 </li>
@@ -50,9 +50,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {year} Stanch Private Solutions <a href="" className="hover:underline">™</a> All Rights Reserved.</span>
+          <span className="text-sm  sm:text-center text-gray-400">© {year} Stanch Private Solutions <a href="" className="hover:underline">™</a> All Rights Reserved.</span>
           
         </div>
       </div>

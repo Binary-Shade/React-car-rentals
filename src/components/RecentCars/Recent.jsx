@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import RecentCard from './RecentCard'
-import { RecentCars } from '../../Data/cars'
+import useFetch from '../hooks/useFetch'
+import Loader from '../Loader/Loader'
 
 const Recent = () => {
+  const [recent, setRecent] = useState([])
+  const {data, loading, error} = useFetch('https://api.jsonbin.io/v3/b/670a0febe41b4d34e4414a40/latest')
   return (
-    <div className=' w-max bg-white border  border-1 mx-auto shadow-lg px-4 pb-6'>
-      <p className='my-5 capitalize text-md font-semibold'>Recently Added cars:</p>
-      <div className="flex flex-col gap-3 flex-wrap w-full md:flex-row">
+    <div className='w-full  bg-white border  border-1 mx-auto shadow-lg px-4 pb-6 '>
+      <div className="flex flex-col items-center justify-center gap-3 flex-wrap  md:flex-row w-full">
+      <p className='my-5 capitalize text-md font-semibold md:hidden'>Recently Added cars:</p>
         {
-          RecentCars.map((car)=>(
-            <RecentCard key={car.id} car={car}/>
-          ))
+          loading ? (
+            <Loader />
+          ) : (
+            data.map((car)=>(
+              car.Recent && <RecentCard key={car.id} car={car}/>
+            ))
+          )
         }
       </div>
     </div>

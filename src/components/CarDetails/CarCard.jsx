@@ -25,7 +25,7 @@ const CarCard = ({car}) => {
                 <div className="flex items-center">
                     <FaHeart className='text-red-500'/>
                 </div>
-                <p className="ml-2 text-sm font-medium text-gray-500">1,000 people liked</p>
+                <p className="ml-2 text-sm font-medium text-gray-500">{car.likes}  people liked</p>
               </div>
               <h2 className="mt-8 text-base text-gray-900">Car-Type : Sports Car</h2>
               
