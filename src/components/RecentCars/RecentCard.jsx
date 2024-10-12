@@ -4,9 +4,9 @@ import { FaHeart } from 'react-icons/fa'
 
 const RecentCard = ({car}) => {
   return (
-    <div className='flex'>
-<div className="group flex w-full mx-auto flex-col overflow-hidden bg-white shadow-md hover:shadow-2xl">
-  <div className="relative flex h-80 w-96 overflow-hidden" >
+    <div className='flex bg-white'>
+<div className="group flex w-full mx-auto flex-col overflow-hidden shadow-md hover:shadow-2xl">
+  <div className="relative flex w-[350px] h-[200px] overflow-hidden" >
     <img className="absolute top-0 right-0 h-full w-full object-cover" src={car.carImage} alt="product image" />
     
   </div>

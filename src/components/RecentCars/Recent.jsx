@@ -7,9 +7,9 @@ const Recent = () => {
   const [recent, setRecent] = useState([])
   const {data, loading, error} = useFetch('https://api.jsonbin.io/v3/b/670a0febe41b4d34e4414a40/latest')
   return (
-    <div className='w-full  bg-white border  border-1 mx-auto shadow-lg px-4 pb-6 '>
-      <div className="flex flex-col items-center justify-center gap-3 flex-wrap  md:flex-row w-full">
-      <p className='my-5 capitalize text-md font-semibold md:hidden'>Recently Added cars:</p>
+    <div className='w-full  border  border-1 mx-auto shadow-lg px-auto pb-6 '>
+      <div className="flex flex-col  items-center justify-center gap-3 flex-wrap  md:flex-row w-full">
+      <p className='my-5  capitalize text-md font-semibold md:hidden'>Recently Added cars:</p>
         {
           loading ? (
             <Loader />
