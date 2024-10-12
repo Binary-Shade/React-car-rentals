@@ -2,7 +2,7 @@
 
 **Author:** [Binary-Shade](https://github.com/Binary-Shade/React-car-rentals.git)
 
-### Live Preview : https://670a4dad681752056591a145--regal-dasik-718ba9.netlify.app/
+### Live Preview : https://670a53eb6e5649ff8eaf9c93--stanch-rentals.netlify.app/
 
 ## Overview
 
