@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import DatePicker from './DatePicker';
 
 const Search = ({ search, setSearch, sliderValue, setSliderValue }) => {
     const [pickupDate, setPickupDate] = useState('');
     const [dropoffDate, setDropoffDate] = useState('');
+    // date range state
+    const [dateValue, setDateValue] = useState({ 
+        startDate: null, 
+        endDate: null
+    });
 
     const handleSliderChange = (event) => {
         const value = parseInt(event.target.value);
@@ -15,6 +21,12 @@ const Search = ({ search, setSearch, sliderValue, setSliderValue }) => {
         setDropoffDate('');
         setSliderValue(5000);
     };
+
+    const handleChange = (newValue) => {
+        setDateValue(newValue)
+        console.log(newValue);
+    };
+    
 
     return (
         <div className='container'>
@@ -31,28 +43,11 @@ const Search = ({ search, setSearch, sliderValue, setSliderValue }) => {
                                 className="mt-2 block w-full rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" 
                             />
                         </div>
-
                         <div className="flex flex-col">
-                            <label htmlFor="pickupDate" className="text-sm font-medium text-stone-600">Pickup Date</label>
-                            <input 
-                                type="date" 
-                                value={pickupDate} 
-                                onChange={(e) => setPickupDate(e.target.value)} 
-                                id="pickupDate" 
-                                className="mt-2 block w-full cursor-pointer rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" 
-                            />
+                        <label htmlFor="pickupDate" className="text-sm font-medium text-stone-600">Date Range</label>
+                        <DatePicker dateValue={dateValue} setDateValue={setDateValue} handleChange={handleChange}/>
                         </div>
-
-                        <div className="flex flex-col">
-                            <label htmlFor="dropoffDate" className="text-sm font-medium text-stone-600">Drop-off Date</label>
-                            <input 
-                                type="date" 
-                                value={dropoffDate} 
-                                onChange={(e) => setDropoffDate(e.target.value)} 
-                                id="dropoffDate" 
-                                className="mt-2 block w-full cursor-pointer rounded-md border border-gray-100 bg-gray-100 px-2 py-2 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" 
-                            />
-                        </div>
+        
 
                         <div className="flex flex-col">
                             <label htmlFor="vehicleType" className="text-sm font-medium text-stone-600">Vehicle Type</label>

@@ -5,21 +5,28 @@ import useFetch from '../hooks/useFetch';
 import Loader from '../Loader/Loader'
 
 function SearchContent() {
+  // search input 
   const [search, setSearch] = useState('');
+  // filtered array
   const [filtered, setFiltered] = useState([]);
+  // slider value state
   const [sliderValue, setSliderValue] = useState(10000); 
+  // useHook fetch api
   const { data, loading, error } = useFetch('https://api.jsonbin.io/v3/b/670a0febe41b4d34e4414a40/latest');
 
+  // user effect to apply filters based on changes
   useEffect(() => {
     if (data) {
       applyFilters();
     }
   }, [data, search, sliderValue]);
 
+  // apply filters function
   const applyFilters = () => {
     const result = data.filter((item) => {
       const itemPrice = parseInt(item.pricePerDay.replace("Rs", "").trim());
       return (
+        // condition checking based on filters
         item.carTitle.toLowerCase().includes(search.toLowerCase()) &&
         itemPrice <= sliderValue
       );
