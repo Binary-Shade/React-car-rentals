@@ -56,9 +56,15 @@ function SearchContent() {
           />
         </div>
         <p className="text-black text-center w-full my-5 font-semibold text-lg lg:hidden">Search Results</p>
-        <div className="right">
-          <ListCard data={filtered}/>
-        </div>
+        {
+          filtered.length ? (
+            <div className="right">
+              <ListCard data={filtered}/>
+          </div>
+          ) : (
+            <p className="text-red-500">No results found !</p>
+          )
+        }
       </div>
     </div>
   );
