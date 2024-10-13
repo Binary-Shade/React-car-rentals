@@ -24,6 +24,7 @@ function SearchContent() {
   // apply filters function
   const applyFilters = () => {
     const result = data.filter((item) => {
+      // parse string from data to integer
       const itemPrice = parseInt(item.pricePerDay.replace("Rs", "").trim());
       return (
         // condition checking based on filters

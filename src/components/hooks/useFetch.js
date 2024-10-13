@@ -20,7 +20,7 @@ const useFetch = (url) =>{
         fetchData()
     }, [])
 
-
+    // incase of refetch
     const reFetch = async ()=>{
         setLoading(true)
         try{

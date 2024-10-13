@@ -3,12 +3,9 @@ import Card from '../Cards/Card';
 
 const Recommend = ({ data }) => {
   const [visibleCars, setVisibleCars] = useState(11);
-
   const showMoreCars = () => {
-    setVisibleCars((prevVisibleCars) => Math.min(prevVisibleCars + data.length));
+    setVisibleCars((prevVisibleCars) => (prevVisibleCars + data.length))
   };
-
- 
   const showLessCars = () => {
     setVisibleCars(11); 
   };
@@ -40,12 +37,12 @@ const Recommend = ({ data }) => {
         ))}
       </div>
       <div className='text-[15px] flex justify-between mt-4'>
-        {data.length > 11 && visibleCars > 11 && (
+        {visibleCars > 11 && (
           <p className='underline cursor-pointer font-semibold' onClick={showLessCars}>
             View Less
           </p>
         )}
-        <p className=''>Cars available: {data.length}</p>
+        <p>Cars available: {data.length}</p>
       </div>
     </div>
   );
