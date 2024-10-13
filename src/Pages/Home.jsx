@@ -6,8 +6,7 @@ import useFetch from '../components/hooks/useFetch'
 
 function Home() {
   const { data, loading, error } = useFetch('https://api.jsonbin.io/v3/b/670a0febe41b4d34e4414a40/latest');
-  console.log(data);
-
+  // console.log(data);
   return (
     <div className='overflow-hidden font-poppins text-black bg-white'>
       {

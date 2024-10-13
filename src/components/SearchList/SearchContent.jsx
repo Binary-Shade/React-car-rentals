@@ -34,38 +34,46 @@ function SearchContent() {
     setFiltered(result);
   };
 
-  if (loading) {
-    return <div className="w-full h-screen flex justify-center items-center">
-      <Loader />
-    </div>;
-  }
-
-  if (error) {
-    return <div className="w-full h-screen flex justify-center items-center text-red-500">Error: {error.message}</div>;
-  }
-
   return (
-    <div className="overflow-hidden p-2 lg:px-32 py-10 bg-white w-full">
-      <div className="flex flex-wrap justify-center lg:justify-evenly w-full">
-        <div className="left">
-          <Search
-            search={search}
-            setSearch={setSearch}
-            sliderValue={sliderValue}
-            setSliderValue={setSliderValue}
-          />
+    <div>
+      {
+      loading ? (
+        <>
+        <div className="w-full h-screen flex justify-center items-center">
+          <Loader />
         </div>
-        <p className="text-black text-center w-full my-5 font-semibold text-lg lg:hidden">Search Results</p>
-        {
-          filtered.length ? (
-            <div className="right">
-              <ListCard data={filtered}/>
+        </>
+      ) : error ? (
+        <div className='w-full h-screen flex justify-center items-center'>
+        <div className="w-full h-screen flex justify-center items-center text-red-500">Error: {error.message}</div>
+        </div>
+      ) : (
+        <>
+        <div className="overflow-hidden p-2 lg:px-32 py-10 bg-white w-full">
+        <div className="flex flex-wrap justify-center lg:justify-evenly w-full">
+          <div className="left">
+            <Search
+              search={search}
+              setSearch={setSearch}
+              sliderValue={sliderValue}
+              setSliderValue={setSliderValue}
+            />
           </div>
-          ) : (
-            <p className="text-red-500">No results found !</p>
-          )
-        }
+          <p className="text-black text-center w-full my-5 font-semibold text-lg lg:hidden">Search Results</p>
+          {
+            filtered.length ? (
+              <div className="right">
+                <ListCard data={filtered}/>
+            </div>
+            ) : (
+              <p className="text-red-500">No results found !</p>
+            )
+          }
+        </div>
       </div>
+        </>
+      )
+    }
     </div>
   );
 }

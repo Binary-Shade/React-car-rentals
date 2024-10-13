@@ -7,22 +7,21 @@ import Header from './components/Navbar/Header'
 import Details from './Pages/Details'
 import Payments from './Pages/Payments'
 import "./index.css"
+import Error from './Pages/Error'
 
 function App() {
-
-
-
-  return (
+return (
     <>
-      <Header />
-     <Routes >
-     <Route> 
-     <Route path='/' element={<Home/>}/>
-     <Route path='/search' element={<VechicleListing/>} />
-     <Route path='/details/:id' element={<Details />} />
-     <Route path='/payments/:id' element={<Payments />} />
-     </Route> 
-     </Routes>
+      <Header/>
+      <Routes >
+        <Route> 
+          <Route path='/' element={<Home/>}/>
+          <Route path='/search' element={<VechicleListing/>} />
+          <Route path='/details/:id' element={<Details />} />
+          <Route path='/payments/:id' element={<Payments />} />
+          <Route path='*' element={<Error />}/>
+        </Route> 
+      </Routes>
       <Footer />
     </>
   )
